@@ -3,6 +3,7 @@ import { databaseProvider } from './database.providers';
 import { ConfigService } from 'src/config/config.service';
 
 @Module({
+  imports:[DatabaseModule],
   providers:[...databaseProvider,ConfigService],
   exports:[...databaseProvider]
 })
